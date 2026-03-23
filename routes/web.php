@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\MishandleController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MishandleController::class, 'index']);
+Route::post('/comment', [MishandleController::class, 'store']);
